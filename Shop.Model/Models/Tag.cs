@@ -3,15 +3,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Shop.Model.Models
 {
-    [Table("Footers")]
-    public class Footer
+    [Table("Tags")]
+    public class Tag
     {
         [Key]
         [MaxLength(50)]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string ID { get; set; }
 
+        [MaxLength(50)]
         [Required]
-        public string Content { get; set; }
+        public string Name { get; set; }
+
+        [MaxLength(50)]
+        [Required]
+        public string Type { get; set; }
     }
 }
